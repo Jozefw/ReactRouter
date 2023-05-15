@@ -1,14 +1,16 @@
 import react from 'react';
-import {Link} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
 
 function Menu(){
-const wee ={
-    color:"red"
-}
-    return <h1 style={wee}>Home Page 
+    const navigate = useNavigate();
+
+    function navigateHandler(){
+        navigate('/products')
+    }
+    return <h1>Home Page 
         <p>
-        <Link to="/products">Products page</Link>
         </p>
+        <button onClick={navigateHandler}>Navigate Somewhere</button>
         </h1>
     
    
